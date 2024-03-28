@@ -29,7 +29,37 @@ app.get("/dynamic-page.html", (req, res) => {
   });
 
   app.post('/contact-me', (req, res) => {
-    res.send("<h1>TODO: Handle contact-me form posts</h1>" + JSON.stringify(req.body));
+
+    // import the helper functions that we need
+    const {isValidContactFormSubmit, sendEmailNotification} = require("./modules/contact-helpers");
+  
+    // Destructure the req.body object into variables
+    const {firstName, lastName, email, comments} = req.body;
+  
+    // Validate the variables
+    if(isValidContactFormSubmit(firstName, lastName, email, comments)){
+      // Everything is valid, so send an email to YOUR email address with the data entered into the form
+      const message = `From: ${firstName} ${lastName}\n
+                      Email: ${email}\n
+                      Message: ${comments}`;
+  
+        sendEmailNotification(message, (err, info) => {
+          if(err){
+            console.log(err);
+            res.status(500).send("There was an error sending the email");
+          }else{
+            // Render a template that confirms the contact form info was recieved:
+            res.render("default-layout", {
+              title: "Contact Confirmation",
+              content: "<h2>Thank you for contacting me!</h2><p>I'll get back to you ASAP.</p>"
+            })
+          }
+        })
+  
+    }else{
+      res.status(400).send("Invalid request - data is not valid")
+    }
+  
   });
 
   const {getBlogList, convertMarkdown} = require("./modules/markdown-helpers")
@@ -57,6 +87,10 @@ app.get("/dynamic-page.html", (req, res) => {
       res.status(404).redirect("/404");
     }
   });
+
+
+
+
 
   app.get("/404", (req, res) => {
     res.status(404);
