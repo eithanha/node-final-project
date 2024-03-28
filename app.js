@@ -10,6 +10,18 @@ const bodyParser = require('body-parser');
 app.use(express.static('public'));
 app.set('view engine', 'ejs')
 
+app.use((req, res, next) => {
+  if (process.env.NODE_ENV === 'production') {
+     if (req.headers['x-forwarded-proto'] !== 'https')
+        // the statement for performing our redirection
+        return res.redirect('https://' + req.headers.host + req.url);
+     else
+        return next();
+  }else{
+     return next();
+  }
+});
+
 // ROUTES
 app.get('/', (req, res) => {
     res.render('home', {
@@ -43,18 +55,18 @@ app.get("/dynamic-page.html", (req, res) => {
                       Email: ${email}\n
                       Message: ${comments}`;
   
-        sendEmailNotification(message, (err, info) => {
-          if(err){
-            console.log(err);
-            res.status(500).send("There was an error sending the email");
-          }else{
-            // Render a template that confirms the contact form info was recieved:
-            res.render("default-layout", {
-              title: "Contact Confirmation",
-              content: "<h2>Thank you for contacting me!</h2><p>I'll get back to you ASAP.</p>"
-            })
-          }
+    sendEmailNotification(message, (err, info) => {
+      if(err){
+        console.log(err);
+        res.status(500).send("There was an error sending the email");
+      }else{
+        // Render a template that confirms the contact form info was recieved:
+        res.render("default-layout", {
+          title: "Contact Confirmation",
+          content: "<h2>Thank you for contacting me!</h2><p>I'll get back to you ASAP.</p>"
         })
+      }
+    })
   
     }else{
       res.status(400).send("Invalid request - data is not valid")
