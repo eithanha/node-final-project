@@ -3,12 +3,14 @@ const port = 8080; // We'll run the server on port 8080
 // IMPORTS
 const express = require('express');
 const app = express();
-
 const bodyParser = require('body-parser');
 
 // MIDDLEWARE
 app.use(express.static('public'));
 app.set('view engine', 'ejs')
+
+// allow the app to receive data from form submits
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use((req, res, next) => {
   if (process.env.NODE_ENV === 'production') {
@@ -29,16 +31,16 @@ app.get('/', (req, res) => {
     });
   });
 
-app.get("/dynamic-page.html", (req, res) => {
-    const currentTime = new Date();
-    res.send(`<h1>The current time is ${currentTime.toString()}</h1>`);
- });
 
  app.get('/contact-me', (req, res) => {
     res.render('contact', {
        title: "Contact Me"
     });
   });
+
+  // app.post('/contact-me', (req, res) => {
+  //   res.send("<h1>TODO: Handle contact-me form posts</h1>" + JSON.stringify(req.body));
+  // });
 
   app.post('/contact-me', (req, res) => {
 
@@ -55,18 +57,15 @@ app.get("/dynamic-page.html", (req, res) => {
                       Email: ${email}\n
                       Message: ${comments}`;
   
-    sendEmailNotification(message, (err, info) => {
-      if(err){
-        console.log(err);
-        res.status(500).send("There was an error sending the email");
-      }else{
-        // Render a template that confirms the contact form info was recieved:
-        res.render("default-layout", {
-          title: "Contact Confirmation",
-          content: "<h2>Thank you for contacting me!</h2><p>I'll get back to you ASAP.</p>"
-        })
-      }
-    })
+      sendEmailNotification(message, (err, info) => {
+        if(err){
+          console.log(err);
+          res.status(500).send("There was an error sending the email");
+        }else{
+          // TODO: render the confirmation page (but for now we'll just send the 'info' param to the browser)
+          res.send(info);
+        }
+      })
   
     }else{
       res.status(400).send("Invalid request - data is not valid")
