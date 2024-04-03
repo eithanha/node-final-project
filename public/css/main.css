@@ -1,1 +1,134 @@
 h1{ color: black; }
+
+/* #mobile-nav-button{
+	position: absolute;
+	top:0px;
+	right:0px;
+	width:44px;
+	height:44px;
+	background-color: red;
+	color:white;
+	font-weight: bold;
+	line-height: 44px;
+	text-align: center;
+	cursor:pointer;
+	display:none;
+}
+
+header{
+	height: 80px;
+	background-color: red;
+}
+
+header h1{
+	color: white;
+}
+
+#main-nav{
+	height: 30px;
+	background-color: orange;
+}
+
+#main-nav ul{
+	margin:0;
+	padding: 0;
+}
+
+#main-nav ul li{
+	height: 100%;
+	list-style: none;
+	display: inline-block;
+}
+
+#main-nav ul li a{
+	display: block;
+	height: 30px;
+	line-height: 30px;
+	color: white;
+	padding: 0px 20px;
+}
+
+#main-nav ul li a:hover{
+	background-color: pink;
+}
+
+#content{
+	overflow: auto;
+	position: relative;
+}
+
+main{
+	float: left;
+	width: 70%;
+	box-sizing: border-box;
+	padding: 20px;
+}
+
+aside{
+	float: left;
+	background-color: orange;
+	width: 30%;
+	box-sizing: border-box;
+	padding: 20px;
+}
+
+footer{
+	height: 28px;
+	font-size: 10px;
+	background-color: red;
+	color: white;
+}
+
+@media all and (max-width: 800px) {
+
+	header{
+		height: 44px;
+	}
+
+	main, aside{
+		width: 100%;
+		float: none;
+	}
+
+	#main-nav{
+		position: absolute;
+		top: 44px;
+		height: 100%;
+		width: 0;
+		transition: width .5s;
+		z-index: 100;
+	}
+
+#main-nav li{
+	overflow: hidden;
+}
+
+#main-nav.show{
+	width: 250px;
+}
+
+#main-nav ul li{
+	display: block;
+}
+
+#mobile-nav-button{
+	display: block;
+}
+/* } */
+
+
+/* #page-container {
+    position: relative;
+    min-height: 100vh;
+  }
+  
+  #content-wrap {
+    padding-bottom: 2.5rem;   
+  }
+  
+  #footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;           
+  } */
