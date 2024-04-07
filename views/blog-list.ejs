@@ -1,34 +1,27 @@
 <%- include('partials/top') %>
-  <h1>Blog Posts</h1>
+<br>
+<div class="container h-100">
+  <div class="d-flex justify-content-center align-items-center">
+    <div class="d-flex flex-column" style="flex-basis: 1500px; flex-grow: 100px; flex-shrink: 100px;">
+      <h1>Blog Posts</h1>
+    </div>
+  </div>
+</div>
   <ul>
-  <% for (let i = 0; i < posts.length; i++) { %>
-    <!-- <div class="row" style="font-weight: 600;">
-      <div class="row-cols-1 row-cols-md-2 g-4" g-4>
-      <div class="col">
-
-        
-          <div class="card">
-         
-            <div class="text-bg-secondary p-3">
-              <div class="card-body" style="padding: 20px; margin:50px;">
-                <li>
-                  <a href="<%=posts[i].link%>" class="link-light"><%=posts[i].title%></a>
-                </li>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
+     <div class="container h-100">
+      <div class="d-flex justify-content-center align-items-center">
+        <div class="d-flex flex-column" style="flex-basis: 1000px; flex-grow: 100px; flex-shrink: 100px;">
     
-    <div class="card mb-3" style="max-width: 540px;">
-      
-      <div class="row g-0">
-        <div class="text-bg-secondary p-3">
-        <div class="col-md-4">
-          <!-- <img src="../images/banner.jpg" class="img-fluid rounded-start" alt="..."> -->
-        </div>
+        <% for (let i = 0; i < posts.length; i++) { %>
+    
+        <div class="card mb-3" style="max-width: 540px;">
         
+          <!-- <div class="row g-0"> -->
+            <div class="text-bg-secondary p-3">
+            <div class="col-md-4">
+              <!-- <img src="../images/banner.jpg" class="img-fluid rounded-start" alt="..." style="width: auto;">  -->
+            </div> 
+          
         <div class="col-md-8">
           <div class="card-body" style="padding: 20px; margin:20px;">
             <li>
@@ -37,9 +30,10 @@
           </div>
         </div>
       </div>
-      </div>
     </div>
-  
+
+
+
       <!-- <li>
          <a href="<%=posts[i].link%>"><%=posts[i].title%></a>
       </li> -->

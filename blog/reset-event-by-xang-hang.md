@@ -5,8 +5,15 @@ description: "An essay about Reset Events"
 published: "2024-4-5"
 tags: ["Reset Event"]
 ---
+<div style="text-align: left; padding: 50px;" markdown="1"> 
+
+### Reset Events In JavaScript
+
+<br>
+
 
 &nbsp;&nbsp;You can make use of the reset event in JavaScript to allow you to reset a form in a webpage.
+
 
 
 
@@ -24,6 +31,7 @@ tags: ["Reset Event"]
 
 &nbsp;&nbsp;To make the button resettable, you can set the button event to a JavaScript function. 
 
+<br>
 
 ```html
 <!DOCTYPE html>
@@ -57,6 +65,8 @@ tags: ["Reset Event"]
 </html>
 
 ```
+<br>
+
 &nbsp;&nbsp;Then in the script body, add the windows.addEventListener method to load the script after the whole page is loaded. Within the windows.addEventListener method, instantiate an element, in this case it will be named 'resets'. Next use the document.querySelector on 'resets' and use it to grab id 'reset' in the DOM.  
 ```js
     <script>
@@ -64,8 +74,11 @@ tags: ["Reset Event"]
     </script>
 
 ```
+<br>
 
 &nbsp;&nbsp;On the next line below 'const resets = document.querySelector("#reset");', create a function named resetFrom. Within the function instantiate another element 'form' and use the document.querySelector on the 'formId' in the DOM.
+
+<br>
 
 ```js
     <script>
@@ -77,7 +90,11 @@ tags: ["Reset Event"]
     </script>
 
 ```
+<br>
+
 &nbsp;&nbsp;Now once you put everything all together it should look like this.
+
+<br>
 
 ```html
 
@@ -120,4 +137,7 @@ tags: ["Reset Event"]
 </body>
 </html>
 ```
+<br>
 &nbsp;&nbsp;When you run the code, it should let you hit the reset button at the bottom of the form to clear out the entered information.
+
+</div>

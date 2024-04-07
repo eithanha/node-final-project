@@ -1,5 +1,46 @@
 <%- include('partials/top') %>
-<h1>Contact Me</h1>
+<br>
+<div class="container h-100">
+  <div class="d-flex justify-content-center align-items-center">
+    <div class="d-flex flex-column" style="flex-basis: 1500px; flex-grow: 100px; flex-shrink: 100px;">
+      <h1>Contact Me</h1>
+    </div>
+  </div>
+</div>
+<form class="row g-3" method="POST" action="/contact-me">
+  <div class="container h-100">
+    <div class="d-flex justify-content-center align-items-center">
+      <div class="d-flex flex-column" style="flex-basis: 1000px; flex-grow: 100px; flex-shrink: 100px;">
+      <div class="container my-1 py-1 text-dark"></div>
+           <div class="row d-flex justify-content-start"></div> 
+      <div class="col-4" style="margin:10px;">
+        <label for="inputFirstName" class="form-label">First Name</label>
+        <input type="firstName" class="form-control" id="inputFirstName">
+      </div>
+      <div class="col-4" style="margin:10px;">
+        <label for="inputLastName" class="form-label">Last Name</label>
+        <input type="lastName" class="form-control" id="inputLasttName">
+      </div>
+      <div class="col-6"  style="margin:10px;">
+        <label for="email" class="form-label">Email</label>
+        <input type="text" class="form-control" id="email" placeholder="john@gmail.com">
+      </div>
+      <div class="col-12">
+        <label for="comment" class="form-label" style="margin:10px;">Comments</label>
+          <div class="form-outline">
+              <textarea class="form-control" id="textArea" rows="10" placeholder="Limit 2500 Characters..." maxlength="2500" style="width: 50%; margin:10px;"></textarea>
+          </div>
+      </div>
+      <div class="col-12" style="padding: 10px;">
+        <button type="submit" class="btn btn-dark">Submit</button>
+      </div>
+    </div>
+  </div>
+</form>
+<%- include('partials/bottom') %>
+
+
+
 <!-- <form method="POST" action="/contact-me">
     <label>First Name:</label>
     <br>
@@ -22,32 +63,3 @@
     <br>
     <input type="submit" value="SUBMIT">
 </form> -->
-
-<form class="row g-3">
-    <div class="container my-1 py-1 text-dark"></div>
-        <div class="row d-flex justify-content-start"></div>
-    <div class="col-4" style="margin:10px;">
-      <label for="inputFirstName" class="form-label">First Name</label>
-      <input type="firstName" class="form-control" id="inputFirstName">
-    </div>
-    <div class="col-4" style="margin:10px;">
-      <label for="inputLastName" class="form-label">Last Name</label>
-      <input type="lastName" class="form-control" id="inputLasttName">
-    </div>
-    <div class="col-6"  style="margin:10px;">
-      <label for="email" class="form-label">Email</label>
-      <input type="text" class="form-control" id="email" placeholder="john@gmail.com">
-    </div>
-    <div class="col-12">
-      <label for="comment" class="form-label" style="margin:10px;">Comments</label>
-        <div class="form-outline">
-            <textarea class="form-control" id="textArea" rows="10" placeholder="Limit 250 Characters..." maxlength="250" style="width: 50%; margin:10px;"></textarea>
-        </div>
-    </div>
-      </div>
-    </div>
-    <div class="col-12" style="padding: 10px;">
-      <button type="submit" class="btn btn-primary">Submit</button>
-    </div>
-  </form>
-<%- include('partials/bottom') %>

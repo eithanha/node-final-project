@@ -5,9 +5,11 @@ description: "An essay about Web Accessibility"
 published: "2024-4-5"
 tags: ["Web Accessibility"]
 ---
+<div style="text-align: left; padding: 50px;" markdown="1"> 
 
 ### Web Accessibility
 
+<br>
 
 &nbsp;&nbsp;&nbsp;&nbsp;Web accessibility is a website designed to work for everyone and not the website be hindered by the lack of hardware, location, language, software, or physical ability to access the website. In essence, this means that a blind person should be able to tell what is on the website without being able to see it. Website accessibility is not limited to just the blind, but to everyone who has any kind of disability.
 
@@ -22,7 +24,8 @@ tags: ["Web Accessibility"]
 ```
 
 &nbsp;&nbsp;&nbsp;&nbsp;Notice how the image source points to a directory where the image is located and the width states how big the image should be, but the alt has a description of the image. This does not just apply to images, but can be used everywhere on the webpage, such as using alt text to describe a link, or a header, or what color the page is on the webpage. 
-
+<br>
+<br>
 ## Aria
 
 &nbsp;&nbsp;&nbsp;&nbsp;Aria stands for Accessible Rich Internet Applications and is used to bridge the gap between accessibility issues that HTML cannot handle natively. Of course, Aria is short for WAI-Aria or Web Accessibility Initiative – Accessible Rich Internet Applications and was created by the World Wide Web Consortium (W3C)^3^. Aria is not required but is strongly recommended since 2014 for websites. 
@@ -38,7 +41,7 @@ Document Structure Roles Example:
   role="alertdialog"
 </div>
 ```
-
+<br>
 &nbsp;&nbsp;&nbsp;&nbsp;In the code above, the aria role is set to alertdialog. It defines what the element does on the page. The alertdialog role is used to notify users much like the alert in HTML.
 
 
@@ -49,6 +52,7 @@ Document Structure Roles Example:
 <div id=”more-info”>Here is more information</div>
 </div>
 ```
+<br>
 
 &nbsp;&nbsp;&nbsp;&nbsp;In the code above the aria property attribute describes the element that the aria property is set to. In the next line the id attribute is set to the same property as the aria attribute above. Specifically, the aria-describedy property attribute describes what the information the id attribute is set to.
 
@@ -60,6 +64,7 @@ Document Structure Roles Example:
   aria-required="true"
   id="firstName"></div>
 ```
+<br>
 
 &nbsp;&nbsp;&nbsp;&nbsp;The above attribute aria-required is used when a textbox or input is required prior to moving on from the page. Setting the attribute to true means that the textbox must be filled out before proceeding. If the aria attribute is set to false, then the information is not required to move on from the page.
 
@@ -70,16 +75,22 @@ Document Structure Roles Example:
   aria-hidden="true"
 </div>
 ```
+<br>
 
 &nbsp;&nbsp;&nbsp;&nbsp;The above attribute of aria-hidden is used to remove an entire element from the accessibility API as it will be hidden. The aria-hidden attribute should not be added when the HTML hidden attribute is already present in the code as they both do the same thing.
 
 ```js
 <button aria-label="Close" onclick="box.close()">
 ```
+<br>
 
 &nbsp;&nbsp;&nbsp;&nbsp;The above attribute aria-label is used when a string value labels an interactive element. An interactive element is something like a button with a label of “close”. The aria-label attribute should only be used for interactive elements in the DOM. The aria-labelledby is used for attributes that are not an interactive element in the DOM.
 
+<br>
+
 &nbsp;&nbsp;&nbsp;&nbsp;Web accessibility is very important in the world wide web as it allows everyone, regardless of disability of hardware limitations, to have equal access to webpages and the internet.
+
+<br>
 
 # Bibliography:
 1.	https://www.w3.org/WAI/fundamentals/accessibility-intro/
@@ -87,3 +98,5 @@ Document Structure Roles Example:
 3.	https://www.lullabot.com/articles/what-heck-aria-beginners-guide-aria-accessibility
 4.	https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles
 5.	https://web.dev/learn/accessibility/aria-html
+
+</div>
