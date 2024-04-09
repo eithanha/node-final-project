@@ -14,6 +14,7 @@ function isValidEmailAddress(email){
   }
   
   function isValidContactFormSubmit(firstName, lastName, email, comments){
+    //return true;
     // make sure none of the params are empty
     if(firstName && lastName && email && comments){
       // make sure no SPAM has been included in the form
@@ -40,7 +41,7 @@ function isValidEmailAddress(email){
     const DOMAIN = "xanghang.com" // ex: mywebsite.com
     const EMAIL_SERVER = "mail." + DOMAIN;
     const EMAIL_ADDRESS = "_mainaccount@" + DOMAIN;
-    const EMAIL_PASSWORD = "T6cK&Sge7V";
+    const EMAIL_PASSWORD = "w2794557!22";
   
     // create reusable transporter object using the default SMTP transport
     let transporter = nodemailer.createTransport({
