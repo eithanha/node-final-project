@@ -1,1 +1,10 @@
 img[alt=create-vue-install] {width: 100%};
+
+body {
+    color: #222;
+    background-color: #fff;
+  }
+  body.dark-theme {
+    color: #eee;
+    background-color: #121212;
+  }
