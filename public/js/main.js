@@ -25,16 +25,41 @@ window.addEventListener('load', function(){
 
 	if (currentTheme == "dark") {
 		document.body.classList.add("dark-theme");
-	  }
+	}
 
-	  btn.addEventListener("click", function() {
-		document.body.classList.toggle("dark-theme");
-		
-		let theme = "light";
+	btn.addEventListener("click", function() {
+	document.body.classList.toggle("dark-theme");
+	
+	let theme = "light";
 
-		if (document.body.classList.contains("dark-theme")) {
-		  theme = "dark";
+	if (document.body.classList.contains("dark-theme")) {
+		theme = "dark";
+	}
+	localStorage.setItem("theme", theme);
+	});
+
+
+	const topBtn = document.querySelector("#topBtn");
+
+	window.onscroll = ()=>{scroll()};
+
+	const scroll = ()=>{
+		if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20){
+			topBtn.style.display = "block";
+		}else{
+			topBtn.style.display = "none";
 		}
-		localStorage.setItem("theme", theme);
-	  });
+	};
+
+	const toTop = ()=>{
+		document.documentElement.scrollTop = 0;
+		document.body.scrollTop = 0;
+	};
+
+	window.addEventListener("click", toTop);
+	
+
+	
+
+
 });

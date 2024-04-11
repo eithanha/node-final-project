@@ -53,7 +53,7 @@ window.addEventListener("load", ()=>{
         }else if(validateEmailAddress(txtEmail.value) == false){
             isValid = flase;
             vEmail.innerHTML = "Email address is not valid";
-            focusOn = txtEmail;
+            focusOn = focusOn || txtEmail;
         }
 
         if(!txtComments.value){
