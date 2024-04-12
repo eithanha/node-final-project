@@ -57,6 +57,7 @@ window.addEventListener('load', function(){
 	};
 
 	window.addEventListener("click", toTop);
+
 	
 
 	
