@@ -40,10 +40,11 @@ window.addEventListener('load', function(){
 
 
 	const topBtn = document.querySelector("#topBtn");
-
+	
 	window.onscroll = ()=>{scroll()};
 
 	const scroll = ()=>{
+		
 		if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20){
 			topBtn.style.display = "block";
 		}else{
@@ -52,13 +53,19 @@ window.addEventListener('load', function(){
 	};
 
 	const toTop = ()=>{
+		
 		document.documentElement.scrollTop = 0;
 		document.body.scrollTop = 0;
 	};
 
-	window.addEventListener("click", toTop);
+	topBtn.addEventListener("click", toTop);
 
-	
+	const resets = document.querySelector("#reset");
+        function resetFrom(){
+           const form = document.querySelector("#formId");
+           form.reset();
+        }
+        resets.addEventListener("click", resetFrom);
 
 	
 

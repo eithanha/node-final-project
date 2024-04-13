@@ -66,7 +66,7 @@ npm install
       el: ‘#intro’,
       data: { 
         name: ‘Fantasy’
-      }
+      }}}
     </script> 
   </head> 
   <body> 
@@ -119,10 +119,16 @@ npm install
 
 
 ```js
+<html>
+<head>
+    <title>Hidden Div Tag</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
 <div id="appShow">
   <div v-show="showDiv">This is div tag that can be hidden</div>
 </div>
-
+</body>
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 <script>
   newVue({

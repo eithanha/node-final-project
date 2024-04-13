@@ -14,16 +14,12 @@ tags: ["Reset Event"]
 
 &nbsp;&nbsp;You can make use of the reset event in JavaScript to allow you to reset a form in a webpage.
 
+<br>
 
 
+&nbsp;&nbsp;The reset event is used in JavaScript to clear out forms.
 
-&nbsp;&nbsp;The reset event is used in JavaScript.
-
-&nbsp;&nbsp;Here are the articles I used to help me figure out how to use the reset event.
-
-1. <a href="https://www.javatpoint.com/javascript-reset" target="_blank">https://www.javatpoint.com/javascript-reset</a>
-1. <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/reset_event" target="_blank">https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/reset_event</a>
-1. <a href="https://www.tutorialspoint.com/How-to-reset-or-clear-a-form-using-JavaScript" target="_blank">https://www.tutorialspoint.com/How-to-reset-or-clear-a-form-using-JavaScript</a>
+<br>
 
 &nbsp;&nbsp;Here is a starter code to use for the reset event.
 
@@ -139,5 +135,15 @@ tags: ["Reset Event"]
 ```
 <br>
 &nbsp;&nbsp;When you run the code, it should let you hit the reset button at the bottom of the form to clear out the entered information.
+
+<br>
+<br>
+
+# Bibliography:
+
+1. <a href="https://www.javatpoint.com/javascript-reset" target="_blank">https://www.javatpoint.com/javascript-reset</a>
+1. <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/reset_event" target="_blank">https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/reset_event</a>
+1. <a href="https://www.tutorialspoint.com/How-to-reset-or-clear-a-form-using-JavaScript" target="_blank">https://www.tutorialspoint.com/How-to-reset-or-clear-a-form-using-JavaScript</a>
+
 
 </div>
